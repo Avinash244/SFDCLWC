@@ -1,0 +1,21 @@
+<template>
+    <lightning-card  title="My ForEach Loop" icon-name="custom:custom14">
+        <ul class='slds-var-m-around_medium forEachList'>
+            <template for:each={userList} for:item="user">
+                <li key={user.Id}>{user.Name}</li>
+            </template>
+        </ul>
+    </lightning-card>
+    <lightning-card  title="My Iterator Looping" icon-name="custom:custom14">
+        <ul class='slds-var-m-around_medium iteratorList'>
+            <template iterator:user={userList}>
+                <li key={user.value.Id}>
+                    <div if:true={user.first} class="slds-text-heading-_large first">Start of List</div>
+                    <div class="mailList">{user.value.Name}</div>
+                    <div if:true={user.last} class="slds-text-heading-_large last">End of List</div>
+                    
+                </li>
+            </template>
+        </ul>
+    </lightning-card>
+</template>
