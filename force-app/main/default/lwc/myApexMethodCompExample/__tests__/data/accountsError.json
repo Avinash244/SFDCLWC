@@ -1,0 +1,9 @@
+{
+    "body":{
+        "message":"an internal server error has occured"
+    },
+    "OK":false,
+    "status":400,
+    "statusText":"NotFound"
+
+}
